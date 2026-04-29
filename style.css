@@ -330,3 +330,17 @@ section {
   transform: scale(1.1);
 }
 
+.grid-item {
+  position: relative;
+}
+
+.grid-item h3 {
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+}
+
+.grid-item .img-wrapper {
+  position: relative;
+  z-index: 1;
+}
