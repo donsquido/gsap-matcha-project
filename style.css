@@ -6,6 +6,7 @@
 
 body {
   font-family: Arial;
+  padding-top: 70px;  /* navbar ke liye space */
 }
 
 section {
@@ -209,12 +210,17 @@ section {
 
 /* ===== NAVBAR ===== */
 .navbar {
-  position: relative;
+  position: fixed;   /* 🔥 important */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;     /* above everything */
   display: flex;
   align-items: center;
   padding: 15px 40px;
   background: white;
 }
+
 
 .nav-item {
   position: relative;
@@ -843,4 +849,53 @@ section {
   font-size: 17px;   /* increased from 15px */
   line-height: 1.8;
   color: #555;
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+  background: black;
+  color: white;
+  padding: 60px 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+
+/* HEADINGS */
+.footer h4 {
+  font-size: 14px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* LINKS */
+.footer p {
+  font-size: 13px;
+  margin: 8px 0;
+  color: #bbb;
+  cursor: pointer;
+}
+
+.footer p:hover {
+  color: white;
+}
+
+/* NEWSLETTER */
+.newsletter input {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+/* RESPONSIVE (important) */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }

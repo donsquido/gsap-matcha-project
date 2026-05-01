@@ -189,3 +189,39 @@ gsap.to(".reveal-text span", {
   ease: "power2.out",
   from: { y: 20 }
 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+/* PARALLAX */
+gsap.to(".business-supplier img", {
+  y: -80,
+  scrollTrigger: {
+    trigger: ".business-supplier",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: true
+  }
+});
+
+/* PIN VIDEO */
+ScrollTrigger.create({
+  trigger: ".video-section",
+  start: "top top",
+  end: "+=500",
+  pin: true,
+  scrub: true
+});
+
+/* STAGGER CARDS */
+gsap.from(".matcha-recipes .recipe-card", {
+  opacity: 0,
+  y: 80,
+  stagger: 0.2,
+  duration: 1,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".matcha-recipes",
+    start: "top 80%"
+  }
+});
+
