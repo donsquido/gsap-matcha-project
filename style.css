@@ -899,3 +899,70 @@ section {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+  .nav-left {
+    display: none; /* hide menu */
+  }
+
+  .nav-center {
+    font-size: 16px;
+  }
+
+  .nav-right {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .image,
+  .text {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .products .container,
+  .recipes .container,
+  .matcha-recipes .container {
+    flex-direction: column;
+  }
+
+  .product-card,
+  .recipe-card {
+    width: 100%;
+  }
+
+  .matcha-recipes img {
+    height: 300px; /* reduce from 500px */
+  }
+}
+@media (max-width: 768px) {
+  .video-box video {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
