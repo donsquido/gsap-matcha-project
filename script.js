@@ -103,3 +103,89 @@ gsap.from(".product-card", {
   duration: 0.9,
   ease: "power2.out"
 });
+
+const modal = document.getElementById("productModal");
+const modalImg = document.getElementById("modalImg");
+const modalTitle = document.getElementById("modalTitle");
+const modalPrice = document.getElementById("modalPrice");
+const modalDesc = document.getElementById("modalDesc");
+const closeBtn = document.querySelector(".close-btn");
+
+document.querySelectorAll(".product-card").forEach(card => {
+  card.addEventListener("click", () => {
+    modal.style.display = "flex";
+
+    modalImg.src = card.dataset.img;
+    modalTitle.innerText = card.dataset.title;
+    modalPrice.innerText = card.dataset.price;
+    modalDesc.innerText = card.dataset.desc;
+  });
+});
+
+/* CLOSE BUTTON */
+closeBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  modal.style.display = "none";
+});
+
+/* prevent closing when clicking inside */
+document.querySelector(".modal-content").addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+/* click outside closes */
+modal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+/* animation organic hojicha */
+gsap.from(".business-supplier .image", {
+  scrollTrigger: {
+    trigger: ".business-supplier",
+    start: "top 80%",
+  },
+  y: 80,
+  opacity: 0,
+  duration: 1,
+  ease: "power2.out"
+});
+
+gsap.from(".matcha-recipes .recipe-card", {
+  scrollTrigger: {
+    trigger: ".matcha-recipes",
+    start: "top 80%",
+  },
+  y: 80,
+  opacity: 0,
+  stagger: 0.2,
+  duration: 1,
+  ease: "power2.out"
+});
+
+
+
+const text = document.querySelector(".reveal-text");
+
+const letters = text.textContent.split("");
+text.textContent = "";
+
+letters.forEach(letter => {
+  const span = document.createElement("span");
+  span.textContent = letter;
+  span.style.display = "inline-block";
+  span.style.opacity = 0;
+  text.appendChild(span);
+});
+
+gsap.to(".reveal-text span", {
+  scrollTrigger: {
+    trigger: ".recipes-intro",
+    start: "top 80%",
+  },
+  y: 0,
+  opacity: 1,
+  stagger: 0.05,
+  duration: 0.4,
+  ease: "power2.out",
+  from: { y: 20 }
+});

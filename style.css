@@ -172,8 +172,7 @@ section {
 .hero {
   position: relative;
   height: 100vh;
-  background: url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
-  display: flex;
+  background: url("./img/background.webp") center/cover no-repeat;  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -343,4 +342,505 @@ section {
 .grid-item .img-wrapper {
   position: relative;
   z-index: 1;
+}
+.add-btn {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: #4CAF50;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.popup-content img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+}
+.product-image {
+  position: relative;
+  width: 100%;
+  height: 250px; /* give fixed height */
+  overflow: hidden;
+}
+
+/* both images overlap */
+.product-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* VERY IMPORTANT */
+  transition: opacity 0.4s ease;
+}
+
+/* default */
+.default-img {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* hover image */
+.hover-img {
+  opacity: 0;
+  z-index: 2;
+}
+
+/* swap */
+.product-card:hover .default-img {
+  opacity: 0;
+}
+
+.product-card:hover .hover-img {
+  opacity: 1;
+}
+.products .container {
+  display: flex;
+  gap: 20px;
+}
+/* ===== HOJICHA SECTION ===== */
+
+.hojicha-section {
+  padding: 80px 20px;
+  background: #f8f8f8;
+}
+
+.hojicha-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.hojicha-image {
+  flex: 1;
+  width: 100%;
+  height: 400px;
+}
+
+.hojicha-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.hojicha-text {
+  flex: 1;
+}
+
+.hojicha-text h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hojicha-text h4 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.hojicha-text p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.shop-btn {
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.shop-btn:hover {
+  background: #4CAF50;
+}
+/* ===== MATCHA FEATURES ===== */
+
+/* ===== MATCHA FEATURES ===== */
+.matcha-features {
+  padding: 80px 20px;
+  background: white;
+}
+
+.features-row {
+  display: flex;
+  gap: 30px;
+  text-align: center;
+  flex-wrap: wrap;
+  align-items: stretch; /* 👈 ensures all boxes same height */
+}
+
+.feature-box {
+  flex: 1;
+  min-width: 250px;
+  padding: 25px 20px; /* 👈 slightly more balanced padding */
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 👈 centers content vertically */
+}
+
+.feature-box .icon {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.feature-box h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.icon {
+  color: #4CAF50;   /* matcha green */
+  margin-bottom: 15px;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+
+.intro {
+  padding-bottom: 30px;   /* reduce space below */
+}
+
+.matcha-features {
+  padding-top: 30px;      /* reduce space above */
+}
+
+/* ===== MODAL ===== */
+
+.product-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 700px;
+  animation: fadeIn 0.4s ease;
+}
+
+.modal-body {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.modal-body img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.modal-text h2 {
+  margin-bottom: 10px;
+}
+
+.modal-text p {
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* ensure modal is above everything */
+.product-modal {
+  z-index: 9999;
+}
+
+/* modal content should be relative */
+.modal-content {
+  position: relative;
+  z-index: 10000;
+}
+
+/* FIX X BUTTON */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 10001;   /* 🔥 highest */
+  font-size: 24px;
+  cursor: pointer;
+  background: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+.video-section {
+  padding: 80px 20px;
+}
+
+.video-box {
+  flex: 1;
+}
+
+.video-box video {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.learn-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.learn-btn:hover {
+  background: #4CAF50;
+}
+/* ===== BUSINESS SUPPLIER SECTION ===== */
+.business-supplier {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.business-supplier .container.row {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.business-supplier .container.row.reverse {
+  flex-direction: row-reverse; /* 👈 image right, text left */
+}
+
+.business-supplier .image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.business-supplier .image img {
+  width: 100%;
+  height: 400px;          /* 👈 same as Hojicha image */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.business-supplier .text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.business-supplier h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.business-supplier h3 {
+  font-size: 20px;
+  margin: 20px 0 10px;
+  color: #333;
+}
+
+.business-supplier p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.business-supplier button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 16px;
+  background: #6ab04c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.business-supplier button:hover {
+  background: #4a9c35;
+}
+
+/* ===== BUSINESS SUPPLIER FIX ===== */
+
+.business-supplier .row {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* make image area bigger */
+.business-supplier .image {
+  flex: 1.2;   /* 🔥 bigger than text */
+  height: auto; /* remove fixed height */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* FIX IMAGE CUT */
+.business-supplier .image img {
+  width: 100%;
+  height: auto;   /* 🔥 important */
+  object-fit: contain; /* show full image */
+  display: block;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+/* TEXT SIDE */
+.business-supplier .text {
+  flex: 1;
+}
+
+/* BUTTON STYLE (match your theme) */
+.business-supplier button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  cursor: pointer;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+
+
+/* click effect (THIS is what you want) */
+.business-supplier button:active {
+  background: #4CAF50; /* matcha green */
+  transform: scale(0.96);
+}
+/* HOJICHA IMAGE HOVER */
+.business-supplier .image img {
+  transition: transform 0.6s ease, filter 0.4s ease;
+}
+
+.business-supplier .image:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.05);
+}
+
+.matcha-recipes .container {
+  display: flex;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.matcha-recipes .recipe-card {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.matcha-recipes img {
+  width: 100%;
+  height: 550px; /* BIG size */
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  position: relative;
+}
+
+.matcha-recipes .recipe-card:hover img {
+  transform: scale(1.08);
+}
+
+.matcha-recipes h3 {
+  font-size: 16px;
+  position: relative;
+  z-index: 2;
+  background: white;   /* optional but clean look */
+  display: inline-block;
+  padding: 4px 10px;
+}
+
+.recipes-intro {
+  padding: 60px 20px 20px; /* top more, bottom less */
+}
+
+.recipes-intro .container {
+  max-width: 900px; /* text width controlled like real site */
+}
+
+.recipes-intro h1 {
+  font-size: 34px;   /* increased from 28px */
+  margin-bottom: 18px;
+  font-weight: 500;
+  
+}
+
+.recipes-intro p {
+  font-size: 17px;   /* increased from 15px */
+  line-height: 1.8;
+  color: #555;
 }
