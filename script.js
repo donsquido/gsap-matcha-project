@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", () => {
 gsap.registerPlugin(ScrollTrigger);
 
 /* HERO PARALLAX */
@@ -138,17 +139,7 @@ modal.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-/* animation organic hojicha */
-gsap.from(".business-supplier .image", {
-  scrollTrigger: {
-    trigger: ".business-supplier",
-    start: "top 80%",
-  },
-  y: 80,
-  opacity: 0,
-  duration: 1,
-  ease: "power2.out"
-});
+
 
 gsap.from(".matcha-recipes .recipe-card", {
   scrollTrigger: {
@@ -225,3 +216,36 @@ gsap.from(".matcha-recipes .recipe-card", {
   }
 });
 
+/* MORE ANIMATIONS */
+document.querySelectorAll(".product-card").forEach(card => {
+
+  const img = card.querySelector("img");
+
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const moveX = (x - rect.width / 2) / 20;
+    const moveY = (y - rect.height / 2) / 20;
+
+    gsap.to(img, {
+      x: moveX,
+      y: moveY,
+      duration: 0.3,
+      ease: "power2.out"
+    });
+  });
+
+  card.addEventListener("mouseleave", () => {
+    gsap.to(img, {
+      x: 0,
+      y: 0,
+      duration: 0.4,
+      ease: "power2.out"
+    });
+  });
+
+});
+
+});
