@@ -1,4 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  const hojichaImg = document.querySelector(".hojicha-image img");
+
+if (hojichaImg) {
+
+  hojichaImg.addEventListener("mouseenter", () => {
+    gsap.to(hojichaImg, {
+      scale: 1.06,
+      duration: 0.4,
+      ease: "power2.out"
+    });
+  });
+
+  hojichaImg.addEventListener("mouseleave", () => {
+    gsap.to(hojichaImg, {
+      scale: 1,
+      duration: 0.4,
+      ease: "power2.out"
+    });
+  });
+
+}
 gsap.registerPlugin(ScrollTrigger);
 
 /* HERO PARALLAX */
@@ -181,7 +203,6 @@ gsap.to(".reveal-text span", {
   from: { y: 20 }
 });
 
-gsap.registerPlugin(ScrollTrigger);
 
 /* PARALLAX */
 gsap.to(".business-supplier img", {
