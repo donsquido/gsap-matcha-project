@@ -23,6 +23,8 @@ if (hojichaImg) {
 }
 gsap.registerPlugin(ScrollTrigger);
 
+
+
 /* HERO PARALLAX */
 gsap.to(".hero", {
   backgroundPosition: "50% 30%",
@@ -269,4 +271,21 @@ document.querySelectorAll(".product-card").forEach(card => {
 
 });
 
+});
+
+gsap.to(".video-text", {
+
+  y: -300,
+
+  ease: "none",
+
+  scrollTrigger: {
+    trigger: ".video-section",
+
+    start: "top center",
+
+    end: "bottom top",
+
+    scrub: 1.5
+  }
 });
