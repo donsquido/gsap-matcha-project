@@ -1397,7 +1397,7 @@ section {
 
   cursor: pointer;
 
-  color: #666;
+  color: #000000;
 
   z-index: 10001;
 }
@@ -1438,6 +1438,7 @@ section {
   font-size: 26px;
   cursor: pointer;
   color: black; /* important */
+  background-color: crimson;
   z-index: 9999;
 }
   /* HIDE DESKTOP LINKS */
