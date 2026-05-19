@@ -753,59 +753,87 @@ container {
 }
 
 /* ===== CINEMATIC VIDEO SECTION ===== */
+/* ================= VIDEO SECTION ================= */
+
 .video-section {
   position: relative;
-  padding: 320px;
-  height: 180vh;
+  height: 225vh;
+
   background: #fff;
+
   overflow: hidden;
 }
 
-/* FULLSCREEN VIDEO */
-.video-section video {
+/* VIDEO WRAPPER */
+.video-box {
   position: sticky;
   top: 0;
 
   width: 100%;
-  height: 85vh;
+  height: 100vh;
 
-  object-fit: contain;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
 }
 
-/* TEXT OVERLAY */
-.video-text {
-  position: relative;
+/* VIDEO */
+.video-box video {
+  width: 62%;
+  height: 62vh;
 
-  width: 90%;
-  max-width: 900px;
+  object-fit: cover;
 
-  margin: 220px auto 0;   /* pushes text BELOW video */
+  display: block;
 
-  padding: 0 20px;
+  border-radius: 8px;
+}
 
-  text-align: center;
+/* WHITE TEXT BOX */
+.video-text-box {
+  position: absolute;
 
-  color: #000;
+  left: 50%;
+  bottom: 20px;
+
+  transform: translateX(-50%);
+
+  background: white;
+
+  padding: 40px 50px;
+
+  max-width: 700px;
+
+  width: fit-content;
 
   z-index: 5;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* TEXT */
+.video-text {
+  text-align: center;
 }
 
 .video-text h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 34px;
+
   line-height: 1.1;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+
+  margin-bottom: 20px;
 }
 
 .video-text p {
-  font-size: 17px;
-  
+  font-size: 18px;
+
   line-height: 1.8;
-  max-width: 650px;
-  margin: 0 auto 20px;
+
+  margin-bottom: 24px;
+
+  color: #555;
 }
 
 /* BUTTON */
@@ -832,7 +860,6 @@ container {
 
   transform: translateY(-2px);
 }
-
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
@@ -887,7 +914,7 @@ container {
   height: 18px;
 }
 
-/*   VIDEO SECTION */ 
+/*   VIDEO SECTION 
 
 .video-section {
   width: 100%;
@@ -914,7 +941,7 @@ container {
 }
 
 
-  /* VIDEO TEXT */
+  /* VIDEO TEXT 
 .video-text {
   width: 92%;
 
@@ -951,6 +978,8 @@ container {
 
   white-space: normal;
 }
+*/
+
 
 /* ---------------------------------------------------------------- */
 
@@ -1140,6 +1169,7 @@ container {
 
 .recipes-intro {
   padding: 60px 20px 20px;   /* top more, bottom less */
+  margin-top: -400px;
   display: flex;             /* 🔥 use flexbox */
   flex-direction: column;    /* stack title + para vertically */
   align-items: center;       /* 🔥 centers horizontally */

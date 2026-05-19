@@ -272,20 +272,47 @@ document.querySelectorAll(".product-card").forEach(card => {
 });
 
 });
+/* VIDEO SCALE */
 
-gsap.to(".video-text", {
+gsap.fromTo(".video-box video",
 
-  y: -400,
+  {
+    width: "62%",
+    height: "62vh"
+  },
+
+  {
+    width: "100%",
+    height: "100vh",
+
+    ease: "power1.out",
+
+    scrollTrigger: {
+      trigger: ".video-section",
+
+      start: "top 50%",
+
+      end: "top top",
+
+      scrub: 1
+    }
+  }
+);
+
+/* TEXT BOX MOVEMENT */
+gsap.to(".video-text-box", {
+
+  y: -900,
 
   ease: "none",
 
   scrollTrigger: {
     trigger: ".video-section",
 
-    start: "top center",
+    start: "top 55%",
 
     end: "bottom top",
 
-    scrub: 1.5
+    scrub: 1
   }
 });
