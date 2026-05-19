@@ -1424,21 +1424,22 @@ section {
     justify-content: space-between;
 
     background: white;
+    overflow: visible; /* important */
 
     z-index: 9999;
   }
 
   /* LEFT HAMBURGER */
-  .mobile-menu {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    width: 32px;
-  }
-
+.mobile-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  font-size: 26px;
+  cursor: pointer;
+  color: black; /* important */
+  z-index: 9999;
+}
   /* HIDE DESKTOP LINKS */
   .nav-left {
     display: none;
