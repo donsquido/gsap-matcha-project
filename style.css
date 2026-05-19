@@ -914,6 +914,8 @@ container {
   height: 18px;
 }
 
+
+
 /*   VIDEO SECTION 
 
 .video-section {
@@ -1000,6 +1002,57 @@ container {
   p {
     font-size: 15px;
   }
+
+/* ================= HOJICHA MOBILE FIX ================= */
+
+.business-supplier .container.row,
+.business-supplier .row {
+  flex-direction: column;
+
+  gap: 24px;
+
+  align-items: center;
+}
+
+/* IMAGE */
+.business-supplier .image {
+  width: 100%;
+
+  flex: unset;
+}
+
+.business-supplier .image img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* TEXT */
+.business-supplier .text {
+  width: 100%;
+
+  text-align: center;
+
+  padding: 0 10px;
+}
+
+.business-supplier h2 {
+  font-size: 28px;
+}
+
+.business-supplier h3 {
+  font-size: 20px;
+}
+
+.business-supplier p {
+  font-size: 15px;
+
+  line-height: 1.7;
+}  
 }
 
 
@@ -1529,60 +1582,107 @@ section {
 
 /* ================= MOBILE NAVBAR ================= */
 
+/* ================= MOBILE NAVBAR ================= */
+
 .mobile-menu {
   display: none;
-  font-size: 32px;
+
+  font-size: 30px;
+
   cursor: pointer;
+
   color: #666;
+
+  z-index: 10001;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
 
   .navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
     height: 72px;
-    padding: 0 16px;
+
+    padding: 0 18px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
+    background: white;
+
+    z-index: 9999;
   }
 
-  /* SHOW hamburger */
+  /* LEFT HAMBURGER */
   .mobile-menu {
-    display: block;
-    z-index: 20;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 32px;
   }
 
-  /* HIDE desktop nav links */
+  /* HIDE DESKTOP LINKS */
   .nav-left {
     display: none;
   }
 
-  /* LOGO */
+  /* CENTER LOGO */
   .nav-center {
-    position: static;
-    transform: none;
+    position: absolute;
 
-    flex: 1;
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
     display: flex;
+
+    align-items: center;
+
     justify-content: center;
   }
 
   .logo {
-    height: 24px;
+    height: 26px;
+
     width: auto;
+
+    display: block;
   }
 
   /* RIGHT ICONS */
   .nav-right {
-    margin-left: 0;
-    gap: 10px;
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
   }
 
   .icon {
     width: 24px;
-    height: 24px;
-  }
 
+    height: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+  }
 }
