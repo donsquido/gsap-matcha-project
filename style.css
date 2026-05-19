@@ -837,98 +837,118 @@ container {
 @media (max-width: 768px) {
 
   /* NAVBAR */
-  .navbar {
-    padding: 12px 20px;
-    height: 70px;
-  }
+/* MOBILE NAVBAR FIX */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  /* HIDE LEFT MENU */
-  .nav-left {
-    display: none;
-  }
+  padding: 0 14px;
 
-  /* CENTER LOGO */
- .nav-center {
-  position: absolute;
-
-  left: 50%;
-
-  transform: translateX(-50%);
+  height: 70px;
 }
 
-  .logo {
-    height: 24px;
-  }
+/* SHOW LEFT MENU AGAIN */
+.nav-left {
+  display: flex;
+  gap: 12px;
 
-  /* RIGHT ICONS */
- .nav-right {
-  margin-left: auto;
-
-  gap: 10px;
-
-  position: relative;
-
-  top: 2px;
+  position: static;
 }
-  .icon svg {
-    width: 20px !important;
-    height: 20px !important;
-  }
 
+.nav-left a {
+  font-size: 11px;
+}
+
+/* REMOVE ABSOLUTE CENTERING */
+.nav-center {
+  position: static;
+
+  transform: none;
+
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  height: 22px;
+}
+
+.nav-right {
+  gap: 8px;
+
+  position: static;
+}
+
+.icon svg {
+  width: 18px;
+  height: 18px;
+}
   /* VIDEO SECTION */
-  .video-section {
-    height: auto;
-    padding-bottom: 40px;
-  }
+ /* VIDEO MOBILE FIX */
+.video-section {
+  width: 100%;
 
-  .video-box {
+  overflow: hidden;
+
+  padding: 20px 0 40px;
+
+  height: auto;
+}
+
+.video-box {
   width: 100%;
 }
 
 .video-box video {
   width: 100%;
-  height: 260px;
 
-  object-fit: cover;
+  height: auto;
 
   display: block;
+
+  object-fit: cover;
 }
+
+
   /* VIDEO TEXT */
- .video-text {
-  width: 90%;
+.video-text {
+  width: 92%;
 
   max-width: 100%;
 
-  margin: 30px auto 0;
+  margin: 25px auto 0;
 
   padding: 0;
 
   text-align: center;
 
+  position: relative;
+
   left: auto;
-  right: auto;
-  bottom: auto;
 
   transform: none;
 }
+.video-text h2 {
+  font-size: 34px;
 
-  .video-text h2 {
-  font-size: 38px;
+  line-height: 1.2;
 
-  line-height: 1.15;
+  margin-bottom: 16px;
 
-  max-width: 100%;
-
-  margin: 0 auto 18px;
+  white-space: normal;
 }
- .video-text p {
-  font-size: 16px;
+
+.video-text p {
+  font-size: 15px;
 
   line-height: 1.7;
 
-  max-width: 100%;
+  margin-bottom: 20px;
 
-  margin: 0 auto 20px;
+  white-space: normal;
 }
   /* RECIPE CARDS */
   .matcha-recipes .container {
