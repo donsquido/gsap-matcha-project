@@ -751,8 +751,8 @@ container {
   border: none;
   padding: 16px 34px;
 }
-/* ===== CINEMATIC VIDEO SECTION ===== */
 
+/* ===== CINEMATIC VIDEO SECTION ===== */
 .video-section {
   position: relative;
   padding: 320px;
@@ -886,8 +886,9 @@ container {
   width: 18px;
   height: 18px;
 }
-  /* VIDEO SECTION */
- /* VIDEO MOBILE FIX */
+
+/*   VIDEO SECTION */ 
+
 .video-section {
   width: 100%;
 
@@ -950,6 +951,9 @@ container {
 
   white-space: normal;
 }
+
+/* ---------------------------------------------------------------- */
+
   /* RECIPE CARDS */
   .matcha-recipes .container {
     flex-direction: column;

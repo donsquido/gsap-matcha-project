@@ -275,7 +275,7 @@ document.querySelectorAll(".product-card").forEach(card => {
 
 gsap.to(".video-text", {
 
-  y: -300,
+  y: -400,
 
   ease: "none",
 
