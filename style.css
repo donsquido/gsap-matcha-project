@@ -848,27 +848,28 @@ container {
   }
 
   /* CENTER LOGO */
-  .nav-center {
-    position: absolute;
-    left: 50%;
-    top: 50%;
+ .nav-center {
+  position: absolute;
 
-    transform: translate(-50%, -50%);
-  }
+  left: 50%;
+
+  transform: translateX(-50%);
+}
 
   .logo {
     height: 24px;
   }
 
   /* RIGHT ICONS */
-  .nav-right {
-    margin-left: auto;
-    gap: 14px;
+ .nav-right {
+  margin-left: auto;
 
-    position: relative;
-    top: 2px;
-  }
+  gap: 10px;
 
+  position: relative;
+
+  top: 2px;
+}
   .icon svg {
     width: 20px !important;
     height: 20px !important;
@@ -880,41 +881,55 @@ container {
     padding-bottom: 40px;
   }
 
-  .video-box video {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-  }
+  .video-box {
+  width: 100%;
+}
 
+.video-box video {
+  width: 100%;
+  height: 260px;
+
+  object-fit: cover;
+
+  display: block;
+}
   /* VIDEO TEXT */
-  .video-text {
-    width: 100%;
-    max-width: 100%;
+ .video-text {
+  width: 90%;
 
-    margin: 40px auto 0;
+  max-width: 100%;
 
-    padding: 0 20px;
+  margin: 30px auto 0;
 
-    left: auto;
-    right: auto;
-    bottom: auto;
+  padding: 0;
 
-    transform: none;
+  text-align: center;
 
-    text-align: center;
-  }
+  left: auto;
+  right: auto;
+  bottom: auto;
+
+  transform: none;
+}
 
   .video-text h2 {
-    font-size: 32px;
-    line-height: 1.2;
-  }
+  font-size: 38px;
 
-  .video-text p {
-    font-size: 15px;
-    line-height: 1.7;
-  }
+  line-height: 1.15;
 
+  max-width: 100%;
+
+  margin: 0 auto 18px;
+}
+ .video-text p {
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  max-width: 100%;
+
+  margin: 0 auto 20px;
+}
   /* RECIPE CARDS */
   .matcha-recipes .container {
     flex-direction: column;
