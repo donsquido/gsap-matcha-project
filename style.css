@@ -1510,7 +1510,7 @@ section {
 /* ================= MOBILE NAVBAR ================= */
 
 
-.mobile-menu {
+.mobile-menu-fixed {
   display: none;
 }
 
@@ -1544,25 +1544,26 @@ section {
   }
 
   /* LEFT HAMBURGER */
-  .mobile-menu {
-    display: block !important;
+ .mobile-menu-fixed {
+  display: flex !important;
 
-    position: fixed;
+  align-items: center;
+  justify-content: center;
 
-    top: 20px;
+  position: fixed;
 
-    left: 20px;
+  top: 18px;
+  left: 18px;
 
-    background: red;
+  width: 42px;
+  height: 42px;
 
-    color: white;
+  font-size: 34px;
 
-    padding: 10px;
+  color: black;
 
-    font-size: 20px;
-
-    z-index: 999999;
-  }
+  z-index: 999999;
+}
 
 
   /* HIDE DESKTOP LINKS */
@@ -1714,31 +1715,4 @@ section {
 
   
 }
-.mobile-menu-fixed {
-  display: none;
-}
 
-@media (max-width: 768px) {
-
-  .mobile-menu-fixed {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    position: fixed;
-
-    top: 18px;
-    left: 18px;
-
-    width: 40px;
-    height: 40px;
-
-    font-size: 34px;
-
-    color: black;
-
-    z-index: 999999;
-  }
-
-}
