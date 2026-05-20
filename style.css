@@ -1712,10 +1712,7 @@ section {
     font-size: 15px;
   }
 
-  
-}
-
-.test-box {
+ .test-box {
   display: none;
 }
 
@@ -1739,4 +1736,6 @@ section {
     z-index: 999999;
   }
 
+} 
 }
+
