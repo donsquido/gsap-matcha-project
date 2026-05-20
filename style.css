@@ -1423,21 +1423,14 @@ section {
 
 /* ================= MOBILE NAVBAR ================= */
 
-/* ================= MOBILE RESPONSIVE ================= */
-
 .mobile-menu {
   display: none;
 }
 
+
 /* MOBILE */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
 
-  /* BODY */
-  body {
-    padding-top: 72px;
-  }
-
-  /* NAVBAR */
   .navbar {
     position: fixed;
 
@@ -1448,9 +1441,7 @@ section {
 
     height: 72px;
 
-    padding: 0 16px;
-
-    background: white;
+    padding: 0 18px;
 
     display: flex;
 
@@ -1458,52 +1449,62 @@ section {
 
     justify-content: space-between;
 
-    z-index: 99999;
+    background: white;
+    overflow: visible; /* important */
+
+    z-index: 9999;
   }
 
-  /* HAMBURGER */
-  .mobile-menu {
-    display: flex;
+  /* LEFT HAMBURGER */
+ .mobile-menu {
+    display: block !important;
 
-    align-items: center;
+    position: fixed;
 
-    justify-content: center;
+    top: 20px;
 
-    width: 40px;
+    left: 20px;
 
-    height: 40px;
+    background: red;
 
-    font-size: 32px;
+    color: white;
 
-    font-weight: bold;
+    padding: 10px;
 
-    color: black;
+    font-size: 20px;
 
-    cursor: pointer;
-
-    z-index: 100000;
+    z-index: 999999;
   }
 
-  /* HIDE DESKTOP MENU */
+
+  /* HIDE DESKTOP LINKS */
   .nav-left {
     display: none;
   }
 
   /* CENTER LOGO */
   .nav-center {
-    position: absolute;
+  position: absolute;
 
-    left: 50%;
+  left: 50%;
 
-    top: 50%;
+  top: 50%;
 
-    transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 
-    z-index: 1;
-  }
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
 
   .logo {
-    height: 24px;
+    height: 26px;
 
     width: auto;
 
@@ -1518,15 +1519,13 @@ section {
 
     align-items: center;
 
-    gap: 10px;
-
-    z-index: 2;
+    gap: 12px;
   }
 
   .icon {
-    width: 22px;
+    width: 24px;
 
-    height: 22px;
+    height: 24px;
 
     display: flex;
 
@@ -1534,122 +1533,94 @@ section {
 
     justify-content: center;
   }
+ 
+  /* RECIPE CARDS */
+.matcha-recipes .container {
+  flex-direction: column;
+}
 
-  .icon svg {
-    width: 18px;
-    height: 18px;
-  }
+.matcha-recipes img {
+  height: 350px;
+}
 
-  /* HERO */
-  .hero {
-    height: 70vh;
+/* GENERAL TEXT */
+h1, h2 {
+  font-size: 30px;
+}
 
-    padding: 20px;
-  }
+p {
+  font-size: 15px;
+}
 
-  .hero h1 {
-    font-size: 34px;
-  }
+/* HOJICHA MOBILE FIX */
+.business-supplier .container.row,
+.business-supplier .row {
+  flex-direction: column;
 
-  .hero p {
-    font-size: 15px;
-  }
+  gap: 24px;
 
-  /* INTRO */
-  .intro .text {
-    text-align: center;
-  }
+  align-items: center;
+}
 
-  h1, h2 {
-    font-size: 30px;
-  }
+.business-supplier .image {
+  width: 100%;
 
-  p {
-    font-size: 15px;
+  flex: unset;
+}
 
-    line-height: 1.7;
-  }
+.business-supplier .image img {
+  width: 100%;
 
-  /* FEATURES */
-  .features-row {
-    flex-direction: column;
-  }
+  height: auto;
 
-  .feature-box {
-    margin-top: 10px;
-  }
+  display: block;
 
-  /* RECIPES */
-  .matcha-recipes .container {
-    flex-direction: column;
-  }
+  object-fit: cover;
+}
 
-  .matcha-recipes img {
-    height: 320px;
-  }
+.business-supplier .text {
+  width: 100%;
 
-  /* VIDEO */
-  .video-section {
-    height: auto;
-  }
+  text-align: center;
 
-  .video-box {
-    width: 100%;
+  padding: 0 10px;
+}
 
-    display: flex;
+.business-supplier h2 {
+  font-size: 28px;
+}
 
-    justify-content: center;
-  }
+.business-supplier h3 {
+  font-size: 20px;
+}
 
-  .video-box video {
-    width: 92%;
+.business-supplier p {
+  font-size: 15px;
 
-    height: 52vh;
+  line-height: 1.7;
+}
 
-    object-fit: cover;
+/* FINAL FIXES BEDORE EXCEEDS */
+body {
+  padding-top: 72px;
+}
 
-    margin: 0 auto;
-  }
+.video-box video {
+  width: 92%;
 
-  .video-text-box {
-    width: 90%;
+  height: 52vh;
 
-    padding: 24px;
-  }
+  object-fit: cover;
+}
 
-  .video-text h2 {
-    font-size: 32px;
+.video-text h2 {
+  font-size: 32px;
 
-    line-height: 1.2;
-  }
+  line-height: 1.2;
+}
 
-  .video-text p {
-    font-size: 15px;
-  }
-
-  /* HOJICHA */
-  .business-supplier .row,
-  .business-supplier .container.row {
-    flex-direction: column;
-
-    gap: 24px;
-  }
-
-  .business-supplier .image,
-  .business-supplier .text {
-    width: 100%;
-  }
-
-  .business-supplier .text {
-    text-align: center;
-  }
-
-  .business-supplier .image img {
-    width: 100%;
-
-    height: auto;
-
-    object-fit: cover;
-  }
+.video-text p {
+  font-size: 15px;
+}
 
 }
