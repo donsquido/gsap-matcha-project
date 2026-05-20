@@ -1480,7 +1480,7 @@ section {
 
     z-index: 10002;
   }
-  
+
   /* HIDE DESKTOP LINKS */
   .nav-left {
     display: none;
@@ -1621,5 +1621,19 @@ body {
 
 .video-text p {
   font-size: 15px;
+}
+
+.mobile-menu {
+  position: absolute;
+
+  left: 16px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  display: flex !important;
+
+  background: red;
 }
 }
