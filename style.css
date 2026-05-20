@@ -1,3 +1,13 @@
+/* GLOBAL CONTAINER */
+.container {
+  width: 90%;
+
+  max-width: 1280px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -224,6 +234,26 @@ container {
   color: #555;
 }
 
+/* WHAT IS MATCHA SECTION */
+.intro {
+  padding: 100px 20px;
+  padding-bottom: 40px; /* add space inside section */
+
+  background: #fff;
+}
+
+.intro .container {
+  max-width: 850px;
+
+  margin: 0 auto;
+}
+
+.intro .text {
+  text-align: center;
+
+  width: 100%;
+}
+
 .hero {
   position: relative;
   height: 100vh;
@@ -276,7 +306,7 @@ container {
   align-items: center;
   justify-content: space-between;   /* better spacing */
   
-  /*height: 68px;*/
+  height: 72px;
   
   padding : 0 40px;
   background: white;
@@ -601,6 +631,7 @@ container {
 /* ===== MATCHA FEATURES ===== */
 .matcha-features {
   padding: 80px 20px;
+  padding-top: 10px;
   background: white;
 }
 
@@ -630,6 +661,7 @@ container {
   justify-content: center;
 
   text-align: center;
+  margin-top: 0; /* remove default margin */
 
   gap: 18px;   /* 🔥 IMPORTANT */
 }
@@ -662,10 +694,11 @@ container {
 
 .intro {
   margin-bottom: 28px;   /* reduce space below */
+  padding-bottom: 40px; /* add space inside section */
 }
 
 .matcha-features {
-  padding-top: 30px;      /* reduce space above */
+  padding-top: 2px;      /* reduce space above */
 }
 
 /* ===== MODAL ===== */
@@ -827,7 +860,7 @@ container {
 }
 
 .video-text p {
-  font-size: 18px;
+  font-size: 17px;
 
   line-height: 1.8;
 
@@ -1018,7 +1051,7 @@ container {
 }
 
 .matcha-recipes h3 {
-  font-size: 16px;
+  font-size: 34px;
   position: relative;
   z-index: 2;
   background: white;   /* optional but clean look */
@@ -1028,7 +1061,7 @@ container {
 
 .recipes-intro {
   padding: 60px 20px 20px;   /* top more, bottom less */
-  margin-top: -400px;
+  margin-top: -480px;
   display: flex;             /* 🔥 use flexbox */
   flex-direction: column;    /* stack title + para vertically */
   align-items: center;       /* 🔥 centers horizontally */
@@ -1041,10 +1074,10 @@ container {
   margin: 0 auto;            /* 🔥 ensures container itself is centered */
 }
 
-.recipes-intro h1 {
+.recipes-intro h2 {
   font-size: 34px;           /* increased from 28px */
   margin-bottom: 20px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .recipes-intro p {
@@ -1393,13 +1426,15 @@ section {
 .mobile-menu {
   display: none;
 
-  font-size: 30px;
+  font-size: 32px;
 
   cursor: pointer;
 
-  color: #000000;
+  color: #000;
 
   z-index: 10001;
+
+  line-height: 1;
 }
 
 /* MOBILE */
@@ -1430,17 +1465,22 @@ section {
   }
 
   /* LEFT HAMBURGER */
-.mobile-menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  font-size: 26px;
-  cursor: pointer;
-  color: black; /* important */
-  background-color: crimson;
-  z-index: 9999;
-}
+ .mobile-menu {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 40px;
+
+    height: 40px;
+
+    position: relative;
+
+    z-index: 10002;
+  }
+  
   /* HIDE DESKTOP LINKS */
   .nav-left {
     display: none;
@@ -1493,7 +1533,7 @@ section {
 
     justify-content: center;
   }
-
+ 
   /* RECIPE CARDS */
 .matcha-recipes .container {
   flex-direction: column;
