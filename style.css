@@ -1715,13 +1715,13 @@ section {
   
 }
 
-.test-box {
+.hamburger-test {
   display: none;
 }
 
 @media (max-width: 768px) {
 
-  .test-box {
+  .hamburger-test {
     display: block;
 
     position: fixed;
@@ -1734,7 +1734,7 @@ section {
 
     color: white;
 
-    padding: 12px;
+    padding: 10px;
 
     z-index: 999999;
   }
