@@ -18,8 +18,12 @@
 body {
   font-family: 'Montserrat', Arial, sans-serif;
 }
+
 /* HEADINGS (Swift alternative) */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Playfair Display', serif;
 }
 
@@ -98,40 +102,49 @@ container {
   background: black;
   color: white;
   text-align: center;
-  padding: 60px 20px;     /* 🔥 adds space inside section */
+  padding: 60px 20px;
+  /* 🔥 adds space inside section */
 }
 
 .cta h2 {
   font-size: 32px;
-  margin-bottom: 20px;    /* 🔥 space below title */
+  margin-bottom: 20px;
+  /* 🔥 space below title */
 }
 
 .cta p {
   font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 25px;    /* 🔥 space below paragraph */
+  margin-bottom: 25px;
+  /* 🔥 space below paragraph */
 }
 
 .cta button {
   background-color: #fff;
   color: #000000;
   border: none;
-  padding: 12px 24px;     /* 🔥 bigger button */
+  padding: 12px 24px;
+  /* 🔥 bigger button */
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 14px;        /* 🔥 larger text */
+  font-size: 14px;
+  /* 🔥 larger text */
   letter-spacing: 1px;
   transition: all 0.3s ease;
-  border-radius: 0;       /* 🔥 removes rounded edges */
-  margin-top: 10px;       /* 🔥 space above button */
+  border-radius: 0;
+  /* 🔥 removes rounded edges */
+  margin-top: 10px;
+  /* 🔥 space above button */
 }
 
 .cta button:hover {
-  transform: translateY(-3px);   /* 🔥 subtle lift on hover */
-  transition: transform 0.3s ease; /* smooth animation */
+  transform: translateY(-3px);
+  /* 🔥 subtle lift on hover */
+  transition: transform 0.3s ease;
+  /* smooth animation */
 }
 
- 
+
 
 /* RECIPES */
 .recipes .container {
@@ -144,6 +157,7 @@ container {
   overflow: hidden;
   border-radius: 10px;
 }
+
 .recipe-card {
   flex: 1;
   text-align: center;
@@ -237,7 +251,8 @@ container {
 /* WHAT IS MATCHA SECTION */
 .intro {
   padding: 100px 20px;
-  padding-bottom: 40px; /* add space inside section */
+  padding-bottom: 40px;
+  /* add space inside section */
 
   background: #fff;
 }
@@ -257,7 +272,7 @@ container {
 .hero {
   position: relative;
   height: 100vh;
-  background: url("./img/background.webp") center/cover no-repeat; 
+  background: url("./img/background.webp") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -295,22 +310,26 @@ container {
 
 /* ===== NAVBAR ===== */
 .navbar {
-  position: fixed;   /* 🔥 important */
+  position: fixed;
+  /* 🔥 important */
   top: 0;
-  
+
   /*left: 0; */
   width: 100%;
-  z-index: 9999;     /* above everything */
+  z-index: 9999;
+  /* above everything */
 
   display: flex;
   align-items: center;
-  justify-content: space-between;   /* better spacing */
-  
+  justify-content: space-between;
+  /* better spacing */
+
   height: 92px;
-  
-  padding : 0 40px;
+
+  padding: 0 40px;
   background: white;
-  overflow:visible; /* important for dropdown */
+  overflow: visible;
+  /* important for dropdown */
 }
 
 
@@ -323,7 +342,8 @@ container {
 .nav-left {
   display: flex;
   gap: 28px;
-  align-items: center;  /* 🔥 important */
+  align-items: center;
+  /* 🔥 important */
   height: 100%;
 
   position: relative;
@@ -354,7 +374,7 @@ container {
   gap: 18px;
   height: 100%;
 
- 
+
 }
 
 /* remove default link style */
@@ -366,18 +386,20 @@ container {
   display: flex;
   align-items: center;
 
-  height: 100%; /* match navbar height for perfect vertical centering */
+  height: 100%;
+  /* match navbar height for perfect vertical centering */
   line-height: 1;
 }
 
 /* container */
-.nav-item:hover > .dropdown {
+.nav-item:hover>.dropdown {
   display: block;
 }
 
 .navbar {
   overflow: visible;
 }
+
 /* dropdown box */
 .nav-left a:hover {
   color: #000000;
@@ -390,10 +412,11 @@ container {
   background: white;
   padding: 10px 15px;
   border-radius: 6px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   display: none;
   min-width: 180px;
-  z-index: 9999;   /* IMPORTANT */
+  z-index: 9999;
+  /* IMPORTANT */
 }
 
 /* dropdown items  about and events*/
@@ -405,11 +428,12 @@ container {
 
 /* hover effect */
 .dropdown p:hover {
-  color: #000000; /* matcha green */
+  color: #000000;
+  /* matcha green */
 }
 
 /* SHOW on hover */
-.nav-item:hover > .dropdown {
+.nav-item:hover>.dropdown {
   display: block;
 }
 
@@ -419,7 +443,7 @@ container {
   display: block;
   text-decoration: none;
   color: black;
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 .dropdown a:hover {
@@ -464,6 +488,7 @@ container {
   position: relative;
   z-index: 1;
 }
+
 .add-btn {
   margin-top: 10px;
   padding: 12px 20px;
@@ -479,13 +504,14 @@ container {
 .add-btn:hover {
   background: #4CAF50;
 }
+
 .popup {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: none;
   align-items: center;
   justify-content: center;
@@ -509,10 +535,12 @@ container {
   cursor: pointer;
   font-size: 20px;
 }
+
 .product-image {
   position: relative;
   width: 100%;
-  height: 250px; /* give fixed height */
+  height: 250px;
+  /* give fixed height */
   overflow: hidden;
 }
 
@@ -524,7 +552,8 @@ container {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  object-fit: contain; /* VERY IMPORTANT */
+  object-fit: contain;
+  /* VERY IMPORTANT */
   transition: opacity 0.4s ease;
 }
 
@@ -548,10 +577,12 @@ container {
 .product-card:hover .hover-img {
   opacity: 1;
 }
+
 .products .container {
   display: flex;
   gap: 20px;
 }
+
 /* ===== HOJICHA SECTION ===== */
 
 .hojicha-section {
@@ -569,7 +600,7 @@ container {
 .hojicha-image {
   flex: 1;
   padding-right: 40px;
-  width: 100%; 
+  width: 100%;
   height: 400px;
 }
 
@@ -585,47 +616,57 @@ container {
   min-width: 300px;
   max-width: 500px;
   margin: 0 auto;
-  padding-left: 20px;   /* breathing space from left edge */
+  padding-left: 20px;
+  /* breathing space from left edge */
 }
 
 .hojicha-text h2 {
   font-size: 32px;
-  margin-bottom: 25px;  /* 🔥 more space below title */
+  margin-bottom: 25px;
+  /* 🔥 more space below title */
 }
 
 .hojicha-text h4 {
   font-size: 14px;
   letter-spacing: 1px;
-  margin-bottom: 30px;  /* 🔥 extra gap below subtitle */
+  margin-bottom: 30px;
+  /* 🔥 extra gap below subtitle */
   color: #666;
 }
 
 .hojicha-text p {
   font-size: 15px;
   line-height: 1.6;
-  margin-bottom: 30px;  /* 🔥 more space between paragraphs */
+  margin-bottom: 30px;
+  /* 🔥 more space between paragraphs */
 }
 
 .shop-btn {
   background-color: #000;
   color: #fff;
   border: none;
-  padding: 12px 20px;          /* bigger button */
+  padding: 12px 20px;
+  /* bigger button */
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 15px;             /* larger text */
+  font-size: 15px;
+  /* larger text */
   position: relative;
   letter-spacing: 1px;
   transition: all 0.3s ease;
-  border-radius: 0;            /* removes rounded edges */
-  margin-top: 2px;            /* 🔥 space above button */
+  border-radius: 0;
+  /* removes rounded edges */
+  margin-top: 2px;
+  /* 🔥 space above button */
 }
 
 
 
 .shop-btn:hover span {
-  transform: translateY(-4px); /* text moves up */
+  transform: translateY(-4px);
+  /* text moves up */
 }
+
 /* ===== MATCHA FEATURES ===== */
 
 /* ===== MATCHA FEATURES ===== */
@@ -640,19 +681,21 @@ container {
   gap: 30px;
   text-align: center;
   flex-wrap: wrap;
-  align-items: stretch; /* 👈 ensures all boxes same height */
+  align-items: stretch;
+  /* 👈 ensures all boxes same height */
 }
 
 .feature-box {
   flex: 1;
   min-width: 250px;
 
-  padding: 35px 28px;   /* more breathing room */
+  padding: 35px 28px;
+  /* more breathing room */
 
   background: #fff;
   border-radius: 8px;
 
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 
   display: flex;
   flex-direction: column;
@@ -661,9 +704,11 @@ container {
   justify-content: center;
 
   text-align: center;
-  margin-top: 0; /* remove default margin */
+  margin-top: 0;
+  /* remove default margin */
 
-  gap: 18px;   /* 🔥 IMPORTANT */
+  gap: 18px;
+  /* 🔥 IMPORTANT */
 }
 
 .feature-box .icon {
@@ -683,7 +728,8 @@ container {
 }
 
 .icon {
-  color: #4CAF50;   /* matcha green */
+  color: #4CAF50;
+  /* matcha green */
   margin-bottom: 15px;
 }
 
@@ -693,12 +739,15 @@ container {
 }
 
 .intro {
-  margin-bottom: 28px;   /* reduce space below */
-  padding-bottom: 40px; /* add space inside section */
+  margin-bottom: 28px;
+  /* reduce space below */
+  padding-bottom: 40px;
+  /* add space inside section */
 }
 
 .matcha-features {
-  padding-top: 2px;      /* reduce space above */
+  padding-top: 2px;
+  /* reduce space above */
 }
 
 /* ===== MODAL ===== */
@@ -706,7 +755,7 @@ container {
 .product-modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: none;
   align-items: center;
   justify-content: center;
@@ -755,11 +804,13 @@ container {
     opacity: 0;
     transform: scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
+
 /* ensure modal is above everything */
 .product-modal {
   z-index: 9999;
@@ -776,7 +827,8 @@ container {
   position: absolute;
   top: 10px;
   right: 15px;
-  z-index: 10001;   /* 🔥 highest */
+  z-index: 10001;
+  /* 🔥 highest */
   font-size: 24px;
   cursor: pointer;
   background: white;
@@ -786,7 +838,6 @@ container {
 }
 
 /* ===== CINEMATIC VIDEO SECTION ===== */
-/* ================= VIDEO SECTION ================= */
 
 .video-section {
   position: relative;
@@ -843,7 +894,7 @@ container {
 
   z-index: 5;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 /* TEXT */
@@ -909,7 +960,8 @@ container {
 }
 
 .business-supplier .container.row.reverse {
-  flex-direction: row-reverse; /* 👈 image right, text left */
+  flex-direction: row-reverse;
+  /*  image right, text left */
 }
 
 .business-supplier .image {
@@ -919,7 +971,8 @@ container {
 
 .business-supplier .image img {
   width: 100%;
-  height: 400px;          /* 👈 same as Hojicha image */
+  height: 400px;
+  /*  same as Hojicha image */
   object-fit: cover;
   border-radius: 8px;
 }
@@ -976,8 +1029,10 @@ container {
 
 /* make image area bigger */
 .business-supplier .image {
-  flex: 1.2;   /* 🔥 bigger than text */
-  height: auto; /* remove fixed height */
+  flex: 1.2;
+  /*  bigger than text */
+  height: auto;
+  /* remove fixed height */
   overflow: hidden;
   border-radius: 12px;
 }
@@ -985,8 +1040,10 @@ container {
 /* FIX IMAGE CUT */
 .business-supplier .image img {
   width: 100%;
-  height: auto;   /* 🔥 important */
-  object-fit: contain; /* show full image */
+  height: auto;
+  /* important */
+  object-fit: contain;
+  /* show full image */
   display: block;
   transition: transform 0.6s ease, filter 0.6s ease;
 }
@@ -1011,9 +1068,11 @@ container {
 
 /* click effect (THIS is what you want) */
 .business-supplier button:active {
-  background: #4CAF50; /* matcha green */
+  background: #4CAF50;
+  /* matcha green */
   transform: scale(0.96);
 }
+
 /* HOJICHA IMAGE HOVER */
 .business-supplier .image img {
   transition: transform 0.6s ease, filter 0.4s ease;
@@ -1040,7 +1099,8 @@ container {
 
 .matcha-recipes img {
   width: 100%;
-  height: 550px; /* BIG size */
+  height: 550px;
+  /* BIG size */
   object-fit: cover;
   transition: transform 0.6s ease;
   position: relative;
@@ -1054,37 +1114,49 @@ container {
   font-size: 17px;
   position: relative;
   z-index: 2;
-  background: white;   /* optional but clean look */
+  background: white;
+  /* optional but clean look */
   display: inline-block;
   padding: 4px 10px;
 }
 
 .recipes-intro {
-  padding: 60px 20px 20px;   /* top more, bottom less */
+  padding: 60px 20px 20px;
+  /* top more, bottom less */
   margin-top: -480px;
-  display: flex;             /* 🔥 use flexbox */
-  flex-direction: column;    /* stack title + para vertically */
-  align-items: center;       /* 🔥 centers horizontally */
-  justify-content: center;   /* 🔥 centers vertically if needed */
-  text-align: center;        /* 🔥 centers text inside */
+  display: flex;
+  /*  use flexbox */
+  flex-direction: column;
+  /* stack title + para vertically */
+  align-items: center;
+  /*  centers horizontally */
+  justify-content: center;
+  /* centers vertically if needed */
+  text-align: center;
+  /*  centers text inside */
 }
 
 .recipes-intro .container {
-  max-width: 900px;          /* text width controlled like real site */
-  margin: 0 auto;            /* 🔥 ensures container itself is centered */
+  max-width: 900px;
+  /* text width controlled like real site */
+  margin: 0 auto;
+  /*  ensures container itself is centered */
 }
 
 .recipes-intro h2 {
-  font-size: 34px;           /* increased from 28px */
+  font-size: 34px;
+  /* increased from 28px */
   margin-bottom: 20px;
   font-weight: 700;
 }
 
 .recipes-intro p {
-  font-size: 17px;           /* increased from 15px */
+  font-size: 17px;
+  /* increased from 15px */
   line-height: 1.8;
   color: #555;
-  margin-top: 12px;          /* 🔥 centers paragraph block */
+  margin-top: 12px;
+  /* centers paragraph block */
 }
 
 /* ===== FOOTER ===== */
@@ -1139,7 +1211,8 @@ container {
 /* MOBILE NAV */
 @media (max-width: 768px) {
   .nav-left {
-    display: none; /* hide menu */
+    display: none;
+    /* hide menu */
   }
 
   .nav-center {
@@ -1165,6 +1238,7 @@ container {
     font-size: 14px;
   }
 }
+
 @media (max-width: 768px) {
   .row {
     flex-direction: column;
@@ -1175,7 +1249,9 @@ container {
     width: 100%;
   }
 }
+
 @media (max-width: 768px) {
+
   .products .container,
   .recipes .container,
   .matcha-recipes .container {
@@ -1188,9 +1264,11 @@ container {
   }
 
   .matcha-recipes img {
-    height: 300px; /* reduce from 500px */
+    height: 300px;
+    /* reduce from 500px */
   }
 }
+
 @media (max-width: 768px) {
   .video-box video {
     height: auto;
@@ -1201,15 +1279,16 @@ container {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .intro .text h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
 
-.intro .text p {
-  font-size: 15px;
-  line-height: 1.8;
-}
+  .intro .text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .intro .text p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
 }
 
 .logo {
@@ -1225,7 +1304,8 @@ container {
   display: flex;
   align-items: center;
   margin-left: auto;
-  gap: 28px;   /* 🔥 strong spacing */
+  gap: 28px;
+  /*  strong spacing */
 }
 
 /* ICON WRAPPER */
@@ -1234,19 +1314,23 @@ container {
   align-items: center;
   justify-content: center;
 
-  width: 32px;   /* 🔥 bigger clickable area */
+  width: 32px;
+  /* bigger clickable area */
   height: 32px;
   position: relative;
-  top: 6px;          /* 🔥 slight vertical adjustment */
+  top: 6px;
+  /* slight vertical adjustment */
 
-  color: #666;   /* gray */
+  color: #666;
+  /* gray */
   cursor: pointer;
   transition: all 0.25s ease;
 }
 
 /* FORCE SVG SIZE */
 .icon svg {
-  width: 22px !important;   /* 🔥 force size */
+  width: 22px !important;
+  /* force size */
   height: 22px !important;
 }
 
@@ -1260,7 +1344,8 @@ container {
 
 .row {
   display: flex;
-  align-items: center;   /* vertical center */
+  align-items: center;
+  /* vertical center */
   gap: 60px;
 }
 
@@ -1275,7 +1360,8 @@ container {
 
 .image img {
   width: 100%;
-  max-width: 520px;   /* SAME width for both sections */
+  max-width: 520px;
+  /* SAME width for both sections */
   height: auto;
   display: block;
   border-radius: 8px;
@@ -1327,8 +1413,10 @@ container {
   display: block;
 
   /* IMPORTANT */
-  border-radius: 0;   /* pointed edges */
-  box-shadow: none;   /* no grey shadow */
+  border-radius: 0;
+  /* pointed edges */
+  box-shadow: none;
+  /* no grey shadow */
 }
 
 /* make sure no background blocks */
@@ -1416,12 +1504,11 @@ section {
 
   transform: translateY(-2px);
 
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 /* ================= MOBILE NAVBAR ================= */
 
-/* ================= MOBILE NAVBAR ================= */
 
 .mobile-menu {
   display: none;
@@ -1450,13 +1537,14 @@ section {
     justify-content: space-between;
 
     background: white;
-    overflow: visible; /* important */
+    overflow: visible;
+    /* important */
 
     z-index: 9999;
   }
 
   /* LEFT HAMBURGER */
- .mobile-menu {
+  .mobile-menu {
     display: block !important;
 
     position: fixed;
@@ -1484,24 +1572,24 @@ section {
 
   /* CENTER LOGO */
   .nav-center {
-  position: absolute;
+    position: absolute;
 
-  left: 50%;
+    left: 50%;
 
-  top: 50%;
+    top: 50%;
 
-  transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
-  display: flex;
+    display: flex;
 
-  align-items: center;
+    align-items: center;
 
-  justify-content: center;
+    justify-content: center;
 
-  pointer-events: none;
+    pointer-events: none;
 
-  z-index: 1;
-}
+    z-index: 1;
+  }
 
   .logo {
     height: 26px;
@@ -1533,97 +1621,122 @@ section {
 
     justify-content: center;
   }
- 
+
   /* RECIPE CARDS */
-.matcha-recipes .container {
-  flex-direction: column;
+  .matcha-recipes .container {
+    flex-direction: column;
+  }
+
+  .matcha-recipes img {
+    height: 350px;
+  }
+
+  /* GENERAL TEXT */
+  h1,
+  h2 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  /* HOJICHA MOBILE FIX */
+  .business-supplier .container.row,
+  .business-supplier .row {
+    flex-direction: column;
+
+    gap: 24px;
+
+    align-items: center;
+  }
+
+  .business-supplier .image {
+    width: 100%;
+
+    flex: unset;
+  }
+
+  .business-supplier .image img {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: cover;
+  }
+
+  .business-supplier .text {
+    width: 100%;
+
+    text-align: center;
+
+    padding: 0 10px;
+  }
+
+  .business-supplier h2 {
+    font-size: 28px;
+  }
+
+  .business-supplier h3 {
+    font-size: 20px;
+  }
+
+  .business-supplier p {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  /* FINAL FIXES BEDORE EXCEEDS */
+  body {
+    padding-top: 72px;
+  }
+
+  .video-box video {
+    width: 92%;
+
+    height: 52vh;
+
+    object-fit: cover;
+  }
+
+  .video-text h2 {
+    font-size: 32px;
+
+    line-height: 1.2;
+  }
+
+  .video-text p {
+    font-size: 15px;
+  }
+
+
 }
 
-.matcha-recipes img {
-  height: 350px;
+.mobile-menu {
+  display: none;
 }
 
-/* GENERAL TEXT */
-h1, h2 {
-  font-size: 30px;
-}
+@media (max-width: 768px) {
 
-p {
-  font-size: 15px;
-}
+  .mobile-menu {
+    display: block !important;
 
-/* HOJICHA MOBILE FIX */
-.business-supplier .container.row,
-.business-supplier .row {
-  flex-direction: column;
+    position: fixed;
 
-  gap: 24px;
+    top: 18px;
 
-  align-items: center;
-}
+    left: 18px;
 
-.business-supplier .image {
-  width: 100%;
+    background: red;
 
-  flex: unset;
-}
+    color: white;
 
-.business-supplier .image img {
-  width: 100%;
+    padding: 10px;
 
-  height: auto;
-
-  display: block;
-
-  object-fit: cover;
-}
-
-.business-supplier .text {
-  width: 100%;
-
-  text-align: center;
-
-  padding: 0 10px;
-}
-
-.business-supplier h2 {
-  font-size: 28px;
-}
-
-.business-supplier h3 {
-  font-size: 20px;
-}
-
-.business-supplier p {
-  font-size: 15px;
-
-  line-height: 1.7;
-}
-
-/* FINAL FIXES BEDORE EXCEEDS */
-body {
-  padding-top: 72px;
-}
-
-.video-box video {
-  width: 92%;
-
-  height: 52vh;
-
-  object-fit: cover;
-}
-
-.video-text h2 {
-  font-size: 32px;
-
-  line-height: 1.2;
-}
-
-.video-text p {
-  font-size: 15px;
-}
-body {
-  background: red !important;
-}
+    z-index: 999999;
+  }
 
 }
