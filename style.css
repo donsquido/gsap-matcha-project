@@ -306,7 +306,7 @@ container {
   align-items: center;
   justify-content: space-between;   /* better spacing */
   
-  height: 72px;
+  height: 92px;
   
   padding : 0 40px;
   background: white;
@@ -1423,23 +1423,21 @@ section {
 
 /* ================= MOBILE NAVBAR ================= */
 
+/* ================= MOBILE RESPONSIVE ================= */
+
 .mobile-menu {
   display: none;
-
-  font-size: 32px;
-
-  cursor: pointer;
-
-  color: #000;
-
-  z-index: 10001;
-
-  line-height: 1;
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
+  /* BODY */
+  body {
+    padding-top: 72px;
+  }
+
+  /* NAVBAR */
   .navbar {
     position: fixed;
 
@@ -1450,7 +1448,9 @@ section {
 
     height: 72px;
 
-    padding: 0 18px;
+    padding: 0 16px;
+
+    background: white;
 
     display: flex;
 
@@ -1458,63 +1458,52 @@ section {
 
     justify-content: space-between;
 
-    background: white;
-    overflow: visible; /* important */
-
-    z-index: 9999;
+    z-index: 99999;
   }
 
-  /* LEFT HAMBURGER */
- .mobile-menu {
-  display: flex;
+  /* HAMBURGER */
+  .mobile-menu {
+    display: flex;
 
-  align-items: center;
+    align-items: center;
 
-  justify-content: center;
+    justify-content: center;
 
-  width: 40px;
+    width: 40px;
 
-  height: 40px;
+    height: 40px;
 
-  font-size: 34px;
+    font-size: 32px;
 
-  color: black;
+    font-weight: bold;
 
-  background: red;
+    color: black;
 
-  position: relative;
+    cursor: pointer;
 
-  z-index: 99999;
-}
+    z-index: 100000;
+  }
 
-  /* HIDE DESKTOP LINKS */
+  /* HIDE DESKTOP MENU */
   .nav-left {
     display: none;
   }
 
   /* CENTER LOGO */
   .nav-center {
-  position: absolute;
+    position: absolute;
 
-  left: 50%;
+    left: 50%;
 
-  top: 50%;
+    top: 50%;
 
-  transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  pointer-events: none;
-
-  z-index: 1;
-}
+    z-index: 1;
+  }
 
   .logo {
-    height: 26px;
+    height: 24px;
 
     width: auto;
 
@@ -1529,13 +1518,15 @@ section {
 
     align-items: center;
 
-    gap: 12px;
+    gap: 10px;
+
+    z-index: 2;
   }
 
   .icon {
-    width: 24px;
+    width: 22px;
 
-    height: 24px;
+    height: 22px;
 
     display: flex;
 
@@ -1543,94 +1534,122 @@ section {
 
     justify-content: center;
   }
- 
-  /* RECIPE CARDS */
-.matcha-recipes .container {
-  flex-direction: column;
-}
 
-.matcha-recipes img {
-  height: 350px;
-}
+  .icon svg {
+    width: 18px;
+    height: 18px;
+  }
 
-/* GENERAL TEXT */
-h1, h2 {
-  font-size: 30px;
-}
+  /* HERO */
+  .hero {
+    height: 70vh;
 
-p {
-  font-size: 15px;
-}
+    padding: 20px;
+  }
 
-/* HOJICHA MOBILE FIX */
-.business-supplier .container.row,
-.business-supplier .row {
-  flex-direction: column;
+  .hero h1 {
+    font-size: 34px;
+  }
 
-  gap: 24px;
+  .hero p {
+    font-size: 15px;
+  }
 
-  align-items: center;
-}
+  /* INTRO */
+  .intro .text {
+    text-align: center;
+  }
 
-.business-supplier .image {
-  width: 100%;
+  h1, h2 {
+    font-size: 30px;
+  }
 
-  flex: unset;
-}
+  p {
+    font-size: 15px;
 
-.business-supplier .image img {
-  width: 100%;
+    line-height: 1.7;
+  }
 
-  height: auto;
+  /* FEATURES */
+  .features-row {
+    flex-direction: column;
+  }
 
-  display: block;
+  .feature-box {
+    margin-top: 10px;
+  }
 
-  object-fit: cover;
-}
+  /* RECIPES */
+  .matcha-recipes .container {
+    flex-direction: column;
+  }
 
-.business-supplier .text {
-  width: 100%;
+  .matcha-recipes img {
+    height: 320px;
+  }
 
-  text-align: center;
+  /* VIDEO */
+  .video-section {
+    height: auto;
+  }
 
-  padding: 0 10px;
-}
+  .video-box {
+    width: 100%;
 
-.business-supplier h2 {
-  font-size: 28px;
-}
+    display: flex;
 
-.business-supplier h3 {
-  font-size: 20px;
-}
+    justify-content: center;
+  }
 
-.business-supplier p {
-  font-size: 15px;
+  .video-box video {
+    width: 92%;
 
-  line-height: 1.7;
-}
+    height: 52vh;
 
-/* FINAL FIXES BEDORE EXCEEDS */
-body {
-  padding-top: 72px;
-}
+    object-fit: cover;
 
-.video-box video {
-  width: 92%;
+    margin: 0 auto;
+  }
 
-  height: 52vh;
+  .video-text-box {
+    width: 90%;
 
-  object-fit: cover;
-}
+    padding: 24px;
+  }
 
-.video-text h2 {
-  font-size: 32px;
+  .video-text h2 {
+    font-size: 32px;
 
-  line-height: 1.2;
-}
+    line-height: 1.2;
+  }
 
-.video-text p {
-  font-size: 15px;
-}
+  .video-text p {
+    font-size: 15px;
+  }
+
+  /* HOJICHA */
+  .business-supplier .row,
+  .business-supplier .container.row {
+    flex-direction: column;
+
+    gap: 24px;
+  }
+
+  .business-supplier .image,
+  .business-supplier .text {
+    width: 100%;
+  }
+
+  .business-supplier .text {
+    text-align: center;
+  }
+
+  .business-supplier .image img {
+    width: 100%;
+
+    height: auto;
+
+    object-fit: cover;
+  }
 
 }
