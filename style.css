@@ -1714,3 +1714,31 @@ section {
 
   
 }
+.mobile-menu-fixed {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .mobile-menu-fixed {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+
+    top: 18px;
+    left: 18px;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 34px;
+
+    color: black;
+
+    z-index: 999999;
+  }
+
+}
