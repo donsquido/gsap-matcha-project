@@ -1712,31 +1712,11 @@ section {
     font-size: 15px;
   }
 
-
-}
-
-.mobile-menu {
-  display: none;
+  
 }
 
 @media (max-width: 768px) {
-
-  .mobile-menu {
-    display: block !important;
-
-    position: fixed;
-
-    top: 18px;
-
-    left: 18px;
-
-    background: red;
-
-    color: white;
-
-    padding: 10px;
-
-    z-index: 999999;
+  body {
+    background: blue !important;
   }
-
 }
