@@ -59,7 +59,26 @@ container {
 
 .product-card {
   flex: 1;
+
   text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+/* TITLE FIX */
+.product-card h3 {
+  min-height: 70px;
+}
+
+/* BUTTON FIX */
+.product-card button {
+  width: fit-content;
+
+  align-self: center;
 }
 
 /* PRODUCT TITLE */
