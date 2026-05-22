@@ -1755,3 +1755,187 @@ section {
 
   filter: brightness(1.05);
 }
+
+/* =========================================
+   MOBILE IMAGE + TEXT PERFECT ALIGNMENT
+========================================= */
+
+@media (max-width: 768px) {
+
+  /* ROW LAYOUT */
+  .hojicha-row {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 26px;
+  }
+
+  /* IMAGE WRAPPER */
+  .hojicha-image {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+  }
+
+  /* IMAGE */
+  .hojicha-image img {
+    width: 100%;
+
+    max-width: 360px;
+
+    height: auto;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 12px;
+  }
+
+  /* TEXT */
+  .hojicha-text {
+    width: 100%;
+
+    max-width: 360px;
+
+    margin: 0 auto;
+
+    text-align: left;
+  }
+
+  .hojicha-text h2 {
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    margin-bottom: 18px;
+  }
+
+  .hojicha-text p {
+    font-size: 15px;
+
+    line-height: 1.8;
+  }
+
+}
+
+/* =========================================
+   MOBILE DROPDOWN FINAL CLEAN VERSION
+========================================= */
+
+.mobile-dropdown {
+  position: fixed;
+
+  top: 72px;
+  left: 0;
+
+  width: 75%;
+
+  height: 65vh;
+
+  background: #111;
+
+  display: none;
+
+  flex-direction: column;
+
+  padding: 70px 22px 26px;
+
+  gap: 24px;
+
+  z-index: 99999;
+
+  overflow-y: auto;
+}
+
+/* SHOW MENU */
+.mobile-dropdown.active {
+  display: flex;
+}
+
+/* SECTION */
+.mobile-item {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+
+  padding-bottom: 14px;
+}
+
+/* TITLE */
+.mobile-title {
+  color: white;
+
+  font-size: 15px;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+}
+
+/* SUBMENU */
+.mobile-submenu {
+  display: none;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-top: 14px;
+}
+
+/* SHOW SUBMENU */
+.mobile-submenu.active {
+  display: flex;
+}
+
+/* LINKS */
+.mobile-submenu a {
+  text-decoration: none;
+
+  color: rgba(255,255,255,0.75);
+
+  font-size: 14px;
+}
+/* TITLE */
+.mobile-title {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  color: white;
+
+  font-size: 15px;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+}
+
+/* SYMBOL */
+.symbol {
+  font-size: 12px;
+
+  transition: 0.3s ease;
+}
+
+/* CLOSE BUTTON */
+.mobile-close {
+  position: absolute;
+
+  top: 22px; 
+  right: 22px;
+
+  color: white;
+
+  font-size: 20px;
+
+  cursor: pointer;
+}

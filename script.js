@@ -316,3 +316,48 @@ gsap.to(".video-text-box", {
     scrub: 1
   }
 });
+
+const menuBtn =
+  document.querySelector(".mobile-menu-fixed");
+
+const mobileMenu =
+  document.querySelector(".mobile-dropdown");
+
+const closeBtn =
+  document.querySelector(".mobile-close");
+
+/* OPEN MENU */
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.add("active");
+});
+
+/* CLOSE MENU */
+closeBtn.addEventListener("click", () => {
+  mobileMenu.classList.remove("active");
+});
+
+/* SUBMENUS */
+const titles =
+  document.querySelectorAll(".mobile-title");
+
+titles.forEach(title => {
+
+  title.addEventListener("click", () => {
+
+    const submenu =
+      title.nextElementSibling;
+
+    const symbol =
+      title.querySelector(".symbol");
+
+    submenu.classList.toggle("active");
+
+    if (submenu.classList.contains("active")) {
+      symbol.innerHTML = "−";
+    } else {
+      symbol.innerHTML = "▼";
+    }
+
+  });
+
+});
