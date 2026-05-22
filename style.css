@@ -335,7 +335,7 @@ container {
 
 .nav-item {
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: 0;
 }
 
 /* LEFT MENU */
@@ -346,7 +346,7 @@ container {
   /* 🔥 important */
   height: 100%;
 
-  /* position: relative; */
+  position: relative; 
   /* top: 6px; */
 }
 
@@ -623,14 +623,14 @@ container {
 .hojicha-text h2 {
   font-size: 32px;
   margin-bottom: 25px;
-  /* 🔥 more space below title */
+  /*  more space below title */
 }
 
 .hojicha-text h4 {
   font-size: 14px;
   letter-spacing: 1px;
   margin-bottom: 30px;
-  /* 🔥 extra gap below subtitle */
+  /*  extra gap below subtitle */
   color: #666;
 }
 
@@ -638,7 +638,7 @@ container {
   font-size: 15px;
   line-height: 1.6;
   margin-bottom: 30px;
-  /* 🔥 more space between paragraphs */
+  /* more space between paragraphs */
 }
 
 .shop-btn {
@@ -657,7 +657,7 @@ container {
   border-radius: 0;
   /* removes rounded edges */
   margin-top: 2px;
-  /* 🔥 space above button */
+  /* space above button */
 }
 
 
@@ -708,7 +708,7 @@ container {
   /* remove default margin */
 
   gap: 18px;
-  /* 🔥 IMPORTANT */
+  /*  IMPORTANT */
 }
 
 .feature-box .icon {
@@ -1045,7 +1045,7 @@ container {
   object-fit: contain;
   /* show full image */
   display: block;
-  transition: transform 0.6s ease, filter 0.6s ease;
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 /* TEXT SIDE */
@@ -1074,14 +1074,14 @@ container {
 }
 
 /* HOJICHA IMAGE HOVER */
-.business-supplier .image img {
-  transition: transform 0.6s ease, filter 0.4s ease;
-}
+/*.business-supplier .image img{ */
+  /*transition: transform 0.6s ease, filter 0.4s ease;*/
+/*}
 
-.business-supplier .image:hover img {
-  transform: scale(1.08);
-  filter: brightness(1.05);
-}
+./*business-supplier .image:hover img {*/
+  /*transform: scale(1.08);*/
+  /*filter: brightness(1.05);*/
+/*}*/
 
 
 .matcha-recipes .container {
@@ -1660,19 +1660,23 @@ section {
   .business-supplier .row {
     flex-direction: column;
 
-    gap: 24px;
+    gap: 28px;
 
     align-items: center;
+    text-align: center;
+
   }
 
   .business-supplier .image {
     width: 100%;
-
-    flex: unset;
+    display: flex;
+    justify-content: center;
+    /*flex: unset;*/
   }
 
   .business-supplier .image img {
-    width: 100%;
+    width: 82%;
+    max-width: 340px;
 
     height: auto;
 
@@ -1725,7 +1729,25 @@ section {
   .video-text p {
     font-size: 15px;
   }
-
   
 }
 
+/* IMAGE HOVER EFFECT */
+/* FINAL IMAGE HOVER */
+.hojicha-image {
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.hojicha-image img {
+  width: 100%;
+  display: block;
+
+  transition: transform 0.22s ease-out, filter 0.22s ease-out;
+}
+
+.hojicha-image:hover img {
+  transform: scale(1.04);
+
+  filter: brightness(1.05);
+}
