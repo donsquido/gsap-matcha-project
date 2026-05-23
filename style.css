@@ -66,7 +66,7 @@ container {
 
   flex-direction: column;
 
-  justify-content: space-between;
+  align-items: center;
 }
 
 /* TITLE FIX */
@@ -122,20 +122,20 @@ container {
   color: white;
   text-align: center;
   padding: 60px 20px;
-  /* 🔥 adds space inside section */
+  /* adds space inside section */
 }
 
 .cta h2 {
   font-size: 32px;
   margin-bottom: 20px;
-  /* 🔥 space below title */
+  /* space below title */
 }
 
 .cta p {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 25px;
-  /* 🔥 space below paragraph */
+  /* 🔥space below paragraph */
 }
 
 .cta button {
@@ -143,22 +143,22 @@ container {
   color: #000000;
   border: none;
   padding: 12px 24px;
-  /* 🔥 bigger button */
+  /* bigger button */
   cursor: pointer;
   text-transform: uppercase;
   font-size: 14px;
-  /* 🔥 larger text */
+  /* larger text */
   letter-spacing: 1px;
   transition: all 0.3s ease;
   border-radius: 0;
-  /* 🔥 removes rounded edges */
+  /* removes rounded edges */
   margin-top: 10px;
-  /* 🔥 space above button */
+  /* space above button */
 }
 
 .cta button:hover {
   transform: translateY(-3px);
-  /* 🔥 subtle lift on hover */
+  /* subtle lift on hover */
   transition: transform 0.3s ease;
   /* smooth animation */
 }
@@ -330,7 +330,7 @@ container {
 /* ===== NAVBAR ===== */
 .navbar {
   position: fixed;
-  /* 🔥 important */
+  /*  important */
   top: 0;
 
   /*left: 0; */
@@ -362,7 +362,7 @@ container {
   display: flex;
   gap: 28px;
   align-items: center;
-  /* 🔥 important */
+  /*  important */
   height: 100%;
 
   position: relative; 
@@ -701,7 +701,7 @@ container {
   text-align: center;
   flex-wrap: wrap;
   align-items: stretch;
-  /* 👈 ensures all boxes same height */
+  /* ensures all boxes same height */
 }
 
 .feature-box {
@@ -771,36 +771,60 @@ container {
 
 /* ===== MODAL ===== */
 
+/* ===== MODAL ===== */
+
 .product-modal {
   position: fixed;
+
   inset: 0;
+
   background: rgba(0, 0, 0, 0.6);
+
   display: none;
+
   align-items: center;
+
   justify-content: center;
-  z-index: 999;
+
+  z-index: 9999;
 }
 
+/* MODAL BOX */
 .modal-content {
+  position: relative;
+
   background: white;
+
   padding: 20px;
+
   border-radius: 12px;
+
   width: 80%;
+
   max-width: 700px;
+
   animation: fadeIn 0.4s ease;
+
+  z-index: 10000;
 }
 
+/* MODAL LAYOUT */
 .modal-body {
   display: flex;
+
   gap: 20px;
+
   align-items: center;
 }
 
+/* IMAGE */
 .modal-body img {
   width: 250px;
+
   border-radius: 10px;
 }
 
+/* TEXT */
 .modal-text h2 {
   margin-bottom: 10px;
 }
@@ -809,27 +833,95 @@ container {
   margin-bottom: 10px;
 }
 
+/* CLOSE BUTTON */
 .close-btn {
   position: absolute;
-  right: 30px;
-  top: 20px;
+
+  top: 10px;
+  right: 15px;
+
+  z-index: 10001;
+
   font-size: 24px;
+
   cursor: pointer;
+
+  background: white;
+
+  border: none;
+
+  padding: 16px 34px;
 }
 
-/* animation */
+/* ANIMATION */
 @keyframes fadeIn {
+
   from {
     opacity: 0;
+
     transform: scale(0.9);
   }
 
   to {
     opacity: 1;
+
     transform: scale(1);
   }
 }
 
+/* =========================================
+   MOBILE MODAL FIX
+========================================= */
+
+@media (max-width: 768px) {
+
+  .modal-content {
+    width: 92%;
+
+    padding: 18px;
+  }
+
+  .modal-body {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .modal-body img {
+    width: 100%;
+
+    max-width: 240px;
+  }
+
+  .modal-text {
+    width: 100%;
+  }
+
+  .modal-text h2 {
+    font-size: 22px;
+
+    line-height: 1.3;
+
+    word-break: break-word;
+  }
+
+  .modal-text p {
+    font-size: 15px;
+
+    word-break: break-word;
+  }
+
+  .close-btn {
+    top: 8px;
+
+    right: 8px;
+
+    padding: 10px 14px;
+
+    font-size: 20px;
+  }
+
+}
 /* ensure modal is above everything */
 .product-modal {
   z-index: 9999;
@@ -847,7 +939,7 @@ container {
   top: 10px;
   right: 15px;
   z-index: 10001;
-  /* 🔥 highest */
+  /* highest */
   font-size: 24px;
   cursor: pointer;
   background: white;
@@ -1288,11 +1380,6 @@ container {
   }
 }
 
-@media (max-width: 768px) {
-  .video-box video {
-    height: auto;
-  }
-}
 
 @media (max-width: 768px) {
   .footer-grid {
@@ -1743,6 +1830,21 @@ section {
     object-fit: cover;
   }
 
+.video-text-box {
+  width: calc(100% - 32px);
+
+  max-width: 420px;
+
+  padding: 20px;
+
+  left: 50%;
+
+  bottom: 24px;
+
+  transform: translateX(-50%);
+
+  box-sizing: border-box;
+}
   .video-text h2 {
     font-size: 32px;
 
@@ -1958,3 +2060,4 @@ section {
 
   cursor: pointer;
 }
+
