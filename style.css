@@ -605,7 +605,7 @@ container {
 /* ===== HOJICHA SECTION ===== */
 
 .hojicha-section {
-  padding: 100px 50px;
+  padding: 48px 24px 20px;
   background: #f8f8f8;
 }
 
@@ -1889,8 +1889,7 @@ section {
 
     flex-direction: column;
 
-    align-items: center;
-
+    align-items: flex-start;
     gap: 26px;
   }
 
@@ -1900,7 +1899,7 @@ section {
 
     display: flex;
 
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   /* IMAGE */
@@ -1924,9 +1923,10 @@ section {
   .hojicha-text {
     width: 100%;
 
-    max-width: 360px;
+    max-width: 100%;
 
-    margin: 0 auto;
+    margin: 0;
+    padding-left: 0;  
 
     text-align: left;
   }
@@ -1944,6 +1944,11 @@ section {
 
     line-height: 1.8;
   }
+  .hojicha-section {
+  padding-left: 16px;
+
+  padding-right: 16px;
+}
 
 }
 
