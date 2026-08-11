@@ -1749,6 +1749,7 @@ section {
   /* RECIPE CARDS */
   .matcha-recipes .container {
     flex-direction: column;
+    margin-top: 20px;
   }
 
   .matcha-recipes img {
